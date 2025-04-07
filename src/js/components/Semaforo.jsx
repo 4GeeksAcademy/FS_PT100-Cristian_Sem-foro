@@ -1,21 +1,27 @@
-import React, { useState } from "react";
+import React from "react";
 
-export const semaforo = () => {
+import { useState } from "react";
+export const Semaforo = () => {
 
-    const [selector, setSelector] = useState ("")
+    const [selector, setSelector] = useState("")
 
     const handleClick = (val) => {
-        setSelector (val)
-    }
 
+        setSelector(val)
+
+    }
     return (
         <div>
             <h2>El semaforo tiene la luz encendida: {selector}</h2>
-            <ul>
-               <li className={`${selector === 'circulo-1' ? 'light-on' : ''}`} onClick={() => handleClick('circulo-1')}></li>
-               <li className={`${selector === 'circulo-2' ? 'light-on' : ''}`} onClick={() => handleClick('circulo-2')}></li>
-               <li className={`${selector === 'circulo-3' ? 'light-on' : ''}`} onClick={() => handleClick('circulo-3')}></li>
-            </ul>
-        </div>
+            <div className="container p-1">
+			<div className="row d-flex justify-content-center">
+				<div className="luces">                  
+                        <div className={`circulo-1 ${selector == "circulo-1" ? "circulo-1 light-on" : ""}` } onClick={() => handleClick('circulo-1')}></div>
+                        <div className={`circulo-2 ${selector == "circulo-2" ? "circulo-2 light-on" : ""}` } onClick={() => handleClick('circulo-2')}></div>
+                        <div className={`circulo-3 ${selector == "circulo-3" ? "circulo-3 light-on" : ""}` } onClick={() => handleClick('circulo-3')}></div>
+                    </div>
+                </div>
+            </div>
+        </div>    
     )
 }
