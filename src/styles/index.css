@@ -1,11 +1,41 @@
-/* 
+.luces{
+    width: 100px;
+    height: 200px;
+    border-radius: 20px;
+    display: grid;
+    place-items: center;
+    background-color: black;
+    padding: 10px;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+.circulo-1{
+    width: 50px;
+    height: 50px;
+    border-radius: 180px;  
+    background-color: red;
+    padding: 10px;
+    position: relative;
+}
 
-*/
+.circulo-2{
+    width: 50px;
+    height: 50px;
+    border-radius: 180px;
+    place-items: center;
+    background-color: orange;
+    padding: 10px;
+}
+
+.circulo-3{
+    width: 50px;
+    height: 50px;
+    border-radius: 180px;
+    place-items: center;
+    background-color: green;
+    padding: 10px;
+}
+
+.light-on{ 
+    box-shadow: 0px 0px 50px 20px yellow;
+}
